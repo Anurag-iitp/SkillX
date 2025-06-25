@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(9, 26, 37);
+    padding: 20px;
+}
+
+header {
+    background: rgb(30, 6, 6);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(237, 234, 234, 0.902);
+    border-radius: 50px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.right-section {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: rgb(227, 214, 214);
+}
+
+.left-section {
+    display: flex;
+}
+
+.left-section a {
+    text-decoration: none;
+    color: rgb(227, 214, 214);
+    margin-right: 10px;
+}
+
+.centre-section {
+    display: flex;
+    align-items: center;
+}
+
+.centre-section input {
+    padding: 10px;
+    margin-right: 5px;
+    width: 500px;
+    border-radius: 60px;
+}
+
+.centre-section button {
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 30px;
+}
+
+.banner {
+    background: url(image2.webp);
+    border-image-width: auto;
+    text-align: center;
+    padding: 200px 0;
+    margin-top: 20px;
+    font-size: 24px;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+#typing-slogan {
+  font-size: 2.5rem;
+  color: rgb(231, 217, 29);
+  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+  border-right: 2px solid white;
+  width: fit-content;
+  margin: auto;
+  padding-right: 5px;
+}
+
+.popular-services {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.services {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 200px;
+    height: 160px;
+    margin-right: 15px;
+    border-radius: 12px;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.service-card p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    background-color: rgb(15, 15, 15);
+    font-size: 14px;
+}
+
+
+
+.skillx-pro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(15, 15, 15);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.skillx-pro-content {
+    width: 60%;
+    color: white;
+}
+
+.skillx-pro-content h2 {
+    margin-bottom: 15px;
+}
+
+.skillx-pro-content ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.skillx-pro-content ul li {
+    margin-bottom: 10px;
+}
+
+.image-container {
+    width: 40%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.why-skillx {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: rgb(15, 15, 15);
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    width: 55%;
+    color: white;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+}
+
+.image-box {
+    width: 40%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+
+.boost-skills {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
