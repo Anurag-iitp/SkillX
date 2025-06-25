@@ -18,7 +18,11 @@ const flow=mysql.createPool({
 router.get('/',(req,res)=>{
     const sql='SELECT * FROM internships';
     flow.query(sql,(err,result)=>{
-        if(err)return res.status(500).json({error:'DATABASE CHECK KAR BHAI'});
+        if (err) {
+    console.error("MySQL ERROR:", err);  // 👈 this will help us see the real error in terminal
+    return res.status(500).json({ error: 'Error in internship table in database' });
+}
+;
         res.json(result);
     });
 });

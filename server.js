@@ -36,6 +36,11 @@ app.get(',',(req,res)=> {
 const internshipRoute = require('./routes/Internship');
 app.use('/Internships',internshipRoute);
 
+// HackathonsRoute
+
+const hackathonRoute = require('./routes/Hackathon');
+app.use('/Hackathons',hackathonRoute); 
+
 // Starting server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
