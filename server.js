@@ -16,6 +16,13 @@ const flow=mysql.createPool({
     database:process.env.SKILL_NAME,
 });
 
+// Signup and login form parser 
+app.use(express.urlencoded({ extended:true}));
+app.use(express.json());
+
+const authRoutes = require('./routes/Auth');
+app.use('/auth', authRoutes);
+
 
 // MIDDLEWARE
 
