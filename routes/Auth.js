@@ -40,4 +40,49 @@ router.post('/signup',async(req,res)=>{
     }
 });
 
+
+
+router.post('/login',(req,res)=>{
+    const {username,password}=req.body;
+
+    if(!username || !password){
+        return res.send('<h2>Feilds are required . <a href="/login.html">TRY AGAIN</a></h2>');
+    };
+
+    const sql = 'SELECT * FROM users WHERE username = ?';
+   flow.query(sql,[username],async(err,result)=>{
+    if(err){
+        return res.send('<h2>Error in Login data. <a href="/login.html">TRY AGAIN</a></h2> ')
+    };
+    if(result.length ===0){
+        return res.send('<h2>User not found. <a href="/login.html">TRY AGAIN</a></h2> ')
+    };
+    const user =result[0];
+const isMatch = await bcrypt.compare(password , user.password);
+
+if(!isMatch){
+    return res.send('<h2> Invalid Credentials . <a href="/login.html">Try again</a></h2>');
+};
+
+// Login Succesful
+res.send(`<h2>Welcome Back , ${user.fname}!</h2><p><a href="/">Go to Home</a></p>`);
+
+
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;
