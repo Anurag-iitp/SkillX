@@ -8,6 +8,10 @@ dotenv.config();
 const app = express();
 
 
+// Setting the ejs 
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'));
+
 // Creating the connection 
 const flow=mysql.createPool({
     host:process.env.SKILL_HOST,

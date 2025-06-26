@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Internship</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Post a New Internship</h1>
+  <form action="/internships/add" method="POST">
+    <input type="date" name="date_of_posting" placeholder="Date of Posting" required />
+    <input type="text" name="company_name" placeholder="Company Name" required />
+    <input type="text" name="job_role" placeholder="Job Role" required />
+    <input type="url" name="source_link" placeholder="Source Link" required />
+    <input type="text" name="job_location" placeholder="Job Location" required />
+    <input type="text" name="experience_required" placeholder="Experience Required" required />
+    <textarea name="skills_required" placeholder="Skills Required" rows="4" required></textarea>
+    <button type="submit">Post Internship</button>
+  </form>
+</body>
+</html>

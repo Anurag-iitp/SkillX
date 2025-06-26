@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Internship Listings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .post-btn {
+      background: #28a745;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .internship-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .internship-card h2 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .internship-card p {
+      margin: 6px 0;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Available Internships</h1>
+    <a class="post-btn" href="/internships/add">+ Post New Internship</a>
+
+    <% if (internships.length === 0) { %>
+      <p>No internships found in the database.</p>
+    <% } else { %>
+      <% internships.forEach(intern => { %>
+        <div class="internship-card">
+          <h2><%= intern.job_role %> at <%= intern.company_name %></h2>
+
+          <% let formattedDate = 'N/A'; %>
+          <% try {
+            if (intern.date_posted) {
+              const d = new Date(intern.date_posted);
+              if (!isNaN(d)) {
+                formattedDate = d.toISOString().split('T')[0];
+              }
+            }
+          } catch(e) {} %>
+
+          <p><strong>Posted on:</strong> <%= formattedDate %></p>
+
+          <p><strong>Location:</strong> <%= intern.job_location %></p>
+          <p><strong>Experience Required:</strong> <%= intern.experience_required %></p>
+          <p><strong>Skills Required:</strong> <%= intern.skills_required %></p>
+          <a class="source-link" href="<%= intern.source_link %>" target="_blank">🔗 View Source</a>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+</body>
+</html>
