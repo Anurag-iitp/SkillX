@@ -19,7 +19,7 @@ router.post('/signup',async(req,res)=>{
     const {fname,lname,dob,username,password}=req.body;
 
     if(!fname || !lname ||!dob || !username || !password){
-        return res.send('<h2>All fields are required. <a href="/signup.html>Try Again</a></h2>');
+        return res.send('<h2>All fields are required. <a href="/signup.html">Try Again</a></h2>');
     };
 
     try {

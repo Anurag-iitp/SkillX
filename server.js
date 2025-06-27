@@ -37,10 +37,15 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname,'public')));
 
 // Routes
-app.get(',',(req,res)=> {
+app.get('/',(req,res)=> {
     res.sendfile(path.join,__dirname ,'public','index.html');
 });
 
+
+// Login route 
+app.get('/login',(req,res)=>{
+    res.sendFile(path.join(__dirname,'public','Login.html'))
+})
 
 // INTERNSHIPROUTE 
 
